@@ -6,21 +6,34 @@ const formEl = document.forms['formCalc'];
 //oppure un commento JSDoc che funziona
 /** @type {HTMLFormElement} */
 const formEl = document.getElementById('formCalc');
-const inputKmEl = document.getElementById('inputKm');
-const inputAgeEl = document.getElementById('inputAge');
-const btnCalcEl = document.getElementById('btnCalc');
+
+const outDistEl = document.getElementById('outputDistanza');
+const outEtaEl = document.getElementById('outputEta');
+const outPrezzoEl = document.getElementById('outputPrezzo');
+
+
+// invece di toFixed(2) che ritorna una stringa, uso l'oggetto Intl.NumberFormat
+const formattatoreEuro = new Intl.NumberFormat('it-IT', {
+  style: 'currency',
+  currency: 'EUR'
+});
 
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
-    const distanza = Number(inputKmEl.value);
-    const eta = Number(inputAgeEl.value);
+    const distanza = Number(formEl.elements.inputKm.value);
+    const eta = Number(formEl.elements.inputAge.value);
     let prezzo = distanza * 0.21;
     console.log(`Distanza: ${distanza} // Eta: ${eta}`);
     if (eta > 65) {
         prezzo -= prezzo * 0.4;
     } else if (eta < 18) {
         prezzo -= prezzo * 0.2;
-    } 
-    console.log(`Il tuo prezzo: ${prezzo} €`)
-    
+    }
+    console.log(`Il tuo prezzo: ${formattatoreEuro.format(prezzo)}`);
+    outDistEl.innerHTML = `Distanza: ${distanza} km`;
+    outEtaEl.innerHTML = `Eta: ${eta} anni`;
+    outPrezzoEl.innerHTML = `Prezzo: ${formattatoreEuro.format(prezzo)}`;
+
+
+
 });

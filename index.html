@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
 <body>
-    <form id="formCalc" name="formCalc">
-        <div>
-            <label for="inputKm">Distanza in km</label>
-            <input type="number" id="inputKm" name="inputKm" required>
+    <div class="wrapper">
+        <h2 class="rye-regular">Inserisci i dati:</h2>
+        <form class="special-elite-regular" id="formCalc" name="formCalc">
+            <div>
+                <label for="inputKm">Distanza in km</label>
+                <input type="number" id="inputKm" name="inputKm" required>
+            </div>
+            <div>
+                <label for="inputAge">Eta passeggero</label>
+                <input type="number" id="inputAge" name="inputAge" required>
+            </div>
+            <button type="submit" class="special-elite-regular"  id="btnCalc">CALCOLA PREZZO</button>
+        </form>
+        <div class="special-elite-regular" id="card">
+            <h2 class="rye-regular">Il tuo biglietto</h1>
+            <p class="valoreOut"><span id="outputDistanza">-</span></p>
+            <p class="valoreOut"><span id="outputEta">-</span></p>
+            <p class="valoreOut"><span id="outputPrezzo">-</span></p>
         </div>
-        <div>
-            <label for="inputAge">Eta passeggero</label>
-            <input type="number" id="inputAge" name="inputAge" required>
-        </div>
-        <button type="submit" id="btnCalc">Calcola</button>
-    </form>
+    </div>
 </body>
 </html>

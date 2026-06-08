@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c9cba3;
+    padding: 2em;
+    font-size: 1.5em;
+}
+
+input {
+    border-radius: 5px;
+}
+
+.rye-regular {
+  font-family: "Rye", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.special-elite-regular {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.wrapper,
+#formCalc,
+#card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+#card {
+    background-color: #f4d59d;
+    padding: 1em;
+    border: 2px solid #472d30;
+    border-radius: 10px;
+}
+
+/* #card > p {
+    border: 2px solid #472d30;
+} */
+
+#btnCalc {
+    padding: 0.5em 1em;
+    color: white;
+    font-weight: 500;
+    background-color:  #723d46;/*#e26d5c;*/
+    border-radius: 10px;
+}
