@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <script defer src="main.js"></script>
 </head>
+
 <body>
     <div class="wrapper">
         <h2 class="rye-regular">Inserisci i dati:</h2>
@@ -22,14 +24,18 @@
                 <label for="inputAge">Eta passeggero</label>
                 <input type="number" id="inputAge" name="inputAge" required>
             </div>
-            <button type="submit" class="special-elite-regular"  id="btnCalc">CALCOLA PREZZO</button>
+            <button type="submit" class="special-elite-regular" id="btnCalc">CALCOLA PREZZO</button>
         </form>
         <div class="special-elite-regular" id="card">
             <h2 class="rye-regular">Il tuo biglietto</h1>
-            <p class="valoreOut"><span id="outputDistanza">-</span></p>
-            <p class="valoreOut"><span id="outputEta">-</span></p>
-            <p class="valoreOut"><span id="outputPrezzo">-</span></p>
+                <p class="valoreOut"><span id="outputDistanza">-</span></p>
+                <p class="valoreOut"><span id="outputEta">-</span></p>
+                <p class="valoreOut"><span id="outputPrezzo">-</span></p>
         </div>
     </div>
+    <footer style="position: fixed; bottom: 0; left: 0; width: 100%;">
+        <img src="img/treno_vapore.svg" alt="Treno a vapore" style="display: block; width: 100%;">
+    </footer>
 </body>
+
 </html>

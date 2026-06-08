@@ -20,10 +20,9 @@ const formattatoreEuro = new Intl.NumberFormat('it-IT', {
 
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
-    const distanza = Number(formEl.elements.inputKm.value);
-    const eta = Number(formEl.elements.inputAge.value);
+    const distanza = parseInt(formEl.elements.inputKm.value);
+    const eta = parseInt(formEl.elements.inputAge.value);
     let prezzo = distanza * 0.21;
-    console.log(`Distanza: ${distanza} // Eta: ${eta}`);
     if (eta > 65) {
         prezzo -= prezzo * 0.4;
     } else if (eta < 18) {
