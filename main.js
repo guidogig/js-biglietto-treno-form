@@ -14,6 +14,13 @@ formEl.addEventListener('submit', (e) => {
     e.preventDefault();
     const distanza = Number(inputKmEl.value);
     const eta = Number(inputAgeEl.value);
+    let prezzo = distanza * 0.21;
     console.log(`Distanza: ${distanza} // Eta: ${eta}`);
+    if (eta > 65) {
+        prezzo -= prezzo * 0.4;
+    } else if (eta < 18) {
+        prezzo -= prezzo * 0.2;
+    } 
+    console.log(`Il tuo prezzo: ${prezzo} €`)
     
 });
