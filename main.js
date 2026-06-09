@@ -7,6 +7,7 @@ const formEl = document.forms['formCalc'];
 /** @type {HTMLFormElement} */
 const formEl = document.getElementById('formCalc');
 
+const cardEl = document.getElementById('card');
 const outDistEl = document.getElementById('outputDistanza');
 const outEtaEl = document.getElementById('outputEta');
 const outPrezzoEl = document.getElementById('outputPrezzo');
@@ -28,11 +29,9 @@ formEl.addEventListener('submit', (e) => {
     } else if (eta < 18) {
         prezzo -= prezzo * 0.2;
     }
+    cardEl.style.display = 'flex';
     console.log(`Il tuo prezzo: ${formattatoreEuro.format(prezzo)}`);
     outDistEl.innerHTML = `Distanza: ${distanza} km`;
     outEtaEl.innerHTML = `Eta: ${eta} anni`;
     outPrezzoEl.innerHTML = `Prezzo: ${formattatoreEuro.format(prezzo)}`;
-
-
-
 });

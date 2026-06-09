@@ -37,6 +37,7 @@ input {
 }
 
 #card {
+    display: none;
     background-color: #f4d59d;
     padding: 1em;
     border: 2px solid #472d30;
